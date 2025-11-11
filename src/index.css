@@ -138,8 +138,8 @@
   }
   #someDiv1,
   #contactAndPersonInfoDiv { width: 100%; }
-  #mainInfoDiv,
-  #personInfo,
+  #mainInfoDiv { height: auto; padding: 0.5rem}
+  #personInfo { height: auto; padding: 0.5rem}
   #contactInfo { width: 92.5%; }
 }
 
