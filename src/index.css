@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans Georgian', 'Noto Sans', sans-serif;
+}
+
+#VisualizationDiv {
+  width: 100%;
+  height: 100dvh;
+  background-color: #E3E9F1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainDiv {
+  width: 85%;
+  height: 86dvh;
+  background-color: #F7F9FC;
+  box-shadow: 0px 0px 28px -3px rgb(62, 62, 62);
+  border-radius: 0.8rem;
+}
+
+#header {
+  width: 100%;
+  height: 15%;
+  background-color: #0056b8a7;
+  border-radius: 0.8rem 0.8rem 0rem 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: white;
+  padding-left: 3.5rem;
+  font-size: 1.8rem;
+  gap: 1rem;
+}
+
+#siteIcon{
+  border-radius: 5px;
+}
+
+#contentDiv {
+  width: 100%;
+  height: 85%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#mainInfoDiv {
+  width: 92.5%;
+  height: 92.5%;
+  background-color: #0056b839;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: black;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 13px -3px #0056b870;
+}
+
+#someDiv1{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+}
+
+#contactAndPersonInfoDiv {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+#personInfo{
+  width: 92.5%;
+  height: 65%;
+  background-color: #0056b839;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: black;
+  overflow-y: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 13px -3px #0056b870;
+}
+
+#contactInfo{
+  width: 92.5%;
+  height: 30%;
+  background-color: #0056b839;
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  font-size: 1.4rem;
+  line-height: 1.5rem;
+  color: black;
+  overflow-y: auto;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  text-align: start;
+  border-radius: 1rem;
+  box-shadow: 0px 0px 13px -3px #0056b870;
+}
+
+#VisualizationDiv { padding: 1rem; }
+#mainDiv { max-width: 100%; }
+#header { flex-wrap: nowrap; }
+#header h1 { font-size: clamp(1.2rem, 2.5vw, 1.8rem); }
+#siteIcon { width: clamp(50px, 10vw, 100px); }
+
+@media (max-width: 768px) {
+  #mainDiv { height: auto; }
+  #contentDiv {
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+  }
+  #someDiv1,
+  #contactAndPersonInfoDiv { width: 100%; }
+  #mainInfoDiv,
+  #personInfo,
+  #contactInfo { width: 92.5%; }
+}
+
+@media (max-width: 1054px) {
+  #VisualizationDiv { padding: 0; }   
+  #mainDiv {
+    width: 100%;                     
+    height: 100dvh;                 
+    max-width: none;                 
+    border-radius: 0;                
+    box-shadow: none;                 
+  }
+}
