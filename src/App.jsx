@@ -1,14 +1,10 @@
 import { useRef } from 'react';
 import './index.css';
+import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 function App() {
-  const personInfoRef = useRef(null);
-  const contactInfoRef = useRef(null);
 
-  const handleNavigation = (section) => {
-    const ref = section === 'personInfo' ? personInfoRef : contactInfoRef;
-    ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  };
+  const phoneNumber = "+995511407855";
 
   return (
     <div id='VisualizationDiv'>
@@ -18,7 +14,39 @@ function App() {
           <h1 id='headerTitle'>Example Title</h1>
         </header>
         <div id='contentDiv'>
-          <div id='someDiv1'>
+          <div id='contactAndPersonInfoDiv'>
+            <div id="contactInfo" > 
+              <h2>კონტაქტი</h2>
+              <div id="contactInfoButtons">
+                <a href={`tel:${phoneNumber}`}>
+                  <button className="call-btn">
+                    <FaPhone /> +995 511 407 855
+                  </button>
+                </a>
+                <a href={`https://wa.me/${phoneNumber}`} target="_blank">
+                  <button className="whatsapp-btn">
+                    <FaWhatsapp /> WhatsApp
+                  </button>
+                </a>
+              </div>
+
+            </div>
+            <div id="personInfo">
+              <h2>ექთანი – ნათია ბირჭაძე</h2>
+
+              <div id="personInfoDetails">
+                <p><span id='spanInfo'>გამოცდილება:</span> 16 წელი</p>
+                <p><span id='spanInfo'>ასაკი:</span> 40 წელი</p>
+              </div>
+
+              <p id="personInfoDescription">
+                ნათია ბირჭაძე არის სერტიფიცირებული და მაღალი პასუხისმგებლობის მქონე ექთანი,
+                რომელსაც აქვს მრავალწლიანი პრაქტიკა კლინიკურ და საავადმყოფო გარემოში.
+              </p>
+            </div>
+            
+          </div>
+                    <div id='someDiv1'>
             <div id='mainInfoDiv'>
               <h1 id='aboutUsTitle'>ჩვენს შესახებ</h1>
 
@@ -46,22 +74,6 @@ function App() {
               </div>
             </div>
           </div>
-          <div id='contactAndPersonInfoDiv'>
-            <div id="personInfo" ref={personInfoRef}>
-              <h2>ექთანი – ნათია ბირჭაძე</h2>
-
-              <div id="personInfoDetails">
-                <p><span id='spanInfo'>გამოცდილება:</span> 16 წელი</p>
-                <p><span id='spanInfo'>ასაკი:</span> 40 წელი</p>
-              </div>
-
-              <p id="personInfoDescription">
-                ნათია ბირჭაძე არის სერტიფიცირებული და მაღალი პასუხისმგებლობის მქონე ექთანი,
-                რომელსაც აქვს მრავალწლიანი პრაქტიკა კლინიკურ და საავადმყოფო გარემოში.
-              </p>
-            </div>
-            <div id="contactInfo" ref={contactInfoRef}></div>
-          </div>
         </div>
       </div>
     </div>
@@ -69,3 +81,4 @@ function App() {
 }
 
 export default App;
+
