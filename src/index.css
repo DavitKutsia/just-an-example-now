@@ -370,7 +370,6 @@
   }
 
   #contactInfo {
-    position: relative;
     width: 92.5%;
     min-height: 150px;
   }
@@ -409,6 +408,6 @@
   }
 
   #contactAndPersonInfoDiv {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
